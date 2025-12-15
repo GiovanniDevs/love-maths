@@ -12,8 +12,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
-function runGame() {}
+/**
+ * The main game loop is called on script loading
+ * and after the user answer has been processed
+ */
+function runGame() {
+  // create 2 random numbers 0 - 25
+  let num1 = Math.floor(Math.random() / 25 + 1);
+  let num2 = Math.floor(Math.random() / 25 + 1);
+}
 
 function checkAnswer() {}
 
