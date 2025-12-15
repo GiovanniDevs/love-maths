@@ -22,11 +22,39 @@
     <h1 class="Heading">
       <img src="assets/images/logo.png" alt="logo" />Love Math
     </h1>
-    <div class="game-area"></div>
+    <div class="game-area">
+      <div class="controls-area">
+        <button class="btn btn--big btn--green">
+          <i class="fa-solid fa-circle-plus"></i>
+        </button>
+        <button class="btn btn--big btn--blue">
+          <i class="fa-solid fa-circle-minus"></i>
+        </button>
+        <button class="btn btn--big btn--orange">
+          <i class="fa-solid fa-circle-xmark"></i>
+        </button>
+        <button class="btn btn--big btn--red">
+          <i class="fa-solid fa-divide"></i>
+        </button>
+      </div>
+      <div class="question-area">
+        <span class="operan1"> 0</span>
+        <span id="operator">x</span>
+        <span class="operand2">0</span>
+        <span>=</span>
+        <p class="answer-message">Enter Answer:</p>
+        <input id="answer-box" type="number" />
+      </div>
+      <button class="btn btn--grey">Submit Answer</button>
+    </div>
     <div class="score-area">
       <p class="scores">Correct Answers <span class="correct">0</span></p>
       <p class="scores">Wrong Answers <span class="wrong">0</span></p>
     </div>
     <script src="assets/js/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/f047558dec.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
