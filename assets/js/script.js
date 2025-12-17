@@ -12,6 +12,15 @@ document.addEventListener("DOMContentLoaded", function () {
         runGame(gameType);
       }
     });
+    // Add event listener to the answer box to add the option of using the enter key instead of clicking on submit
+
+    document
+      .getElementById("answer-box")
+      .addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+          checkAnswer();
+        }
+      });
   }
   // Running addition on page load to have a baseline quiz ready
   runGame("addition");
@@ -21,6 +30,10 @@ document.addEventListener("DOMContentLoaded", function () {
  * and after the user answer has been processed
  */
 function runGame(gameType) {
+  // empties the answer box so is ready for typing and set the focus on it
+  document.getElementById("answer-box").value = "";
+  document.getElementById("answer-box").focus();
+
   // create 2 random numbers 0 - 25
   let num1 = Math.floor(Math.random() * 25 + 1);
   let num2 = Math.floor(Math.random() * 25 + 1);
